@@ -1,0 +1,29 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "Web App with Node and Express\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuzub/library-with-node-express.git"
+  },
+  "keywords": [
+    "library",
+    "node",
+    "express",
+    "mongodb",
+    "ejs"
+  ],
+  "author": "learning",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuzub/library-with-node-express/issues"
+  },
+  "homepage": "https://github.com/yuzub/library-with-node-express#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
