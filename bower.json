@@ -1,16 +1,11 @@
 {
   "name": "library",
-  "version": "1.0.0",
   "description": "Web App with Node and Express\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yuzub/library-with-node-express.git"
-  },
+  "authors": [
+    "learning"
+  ],
+  "license": "ISC",
   "keywords": [
     "library",
     "node",
@@ -18,13 +13,16 @@
     "mongodb",
     "ejs"
   ],
-  "author": "learning",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yuzub/library-with-node-express/issues"
-  },
-  "homepage": "https://github.com/yuzub/library-with-node-express#readme",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
-    "express": "^4.15.2"
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
   }
 }
