@@ -1,16 +1,16 @@
 var express = require('express');
 var mongodb = require('mongodb').MongoClient;
 var bookRouter = express.Router();
-var objectId = require('mongodb').ObjectID;
+var ObjectId = require('mongodb').ObjectID;
 
-	// var url = 'mongodb://localhost:27017/libraryApp';
-	var url = 'mongodb://yoda:master@ds131510.mlab.com:31510/libraryapp';
+// var url = 'mongodb://localhost:27017/libraryApp';
+var url = 'mongodb://yoda:master@ds131510.mlab.com:31510/libraryapp';
 
 var router = function(nav) {
 
 	bookRouter.route('/')
-		.get((req, res) => {
-			
+		.get(function(req, res) {
+
 			mongodb.connect(url, function(err, db) {
 
 				if (err) {
@@ -20,9 +20,9 @@ var router = function(nav) {
 				}
 
 				var collection = db.collection('books');
-				collection.find({}).toArray((err, results) => {
+				collection.find({}).toArray(function(err, results) {
 					res.render('bookListView', {
-						title: 'Books', 
+						title: 'Books',
 						nav: nav,
 						books: results
 					});
@@ -33,8 +33,8 @@ var router = function(nav) {
 		});
 
 	bookRouter.route('/:id')
-		.get((req, res) => {
-			var id = new objectId(req.params.id);
+		.get(function(req, res) {
+			var id = new ObjectId(req.params.id);
 			mongodb.connect(url, function(err, db) {
 
 				if (err) {
@@ -44,9 +44,9 @@ var router = function(nav) {
 				}
 
 				var collection = db.collection('books');
-				collection.findOne({_id: id}, (err, results) => {
+				collection.findOne({_id: id}, function(err, results) {
 					res.render('bookView', {
-						title: 'Books', 
+						title: 'Books',
 						nav: nav,
 						book: results
 					});

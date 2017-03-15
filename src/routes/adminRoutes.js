@@ -60,9 +60,9 @@ var router = function(nav) {
 			// res.send('inserting books');
 			// var url = 'mongodb://localhost:27017/libraryApp';
 			var url = 'mongodb://yoda:master@ds131510.mlab.com:31510/libraryapp';
-			
+
 			mongodb.connect(url, function(err, db) {
-				
+
 				if (err) {
 					console.log(err);
 				} else {
