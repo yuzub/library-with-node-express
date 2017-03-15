@@ -57,17 +57,27 @@ var router = function(nav) {
 
 	adminRouter.route('/addBooks')
 		.get(function(req, res) {
-			// res.send('adding books');
-			var url = 'mongodb://localhost:27017/libraryApp';
+			// res.send('inserting books');
+			// var url = 'mongodb://localhost:27017/libraryApp';
+			var url = 'mongodb://yoda:master@ds131510.mlab.com:31510/libraryapp';
 			
 			mongodb.connect(url, function(err, db) {
-				if (err) {console.log(err);}
+				
+				if (err) {
+					console.log(err);
+				} else {
+					console.log('connecting to mlab');
+				}
+
 				var collection = db.collection('books');
 				collection.insertMany(books, function(err, results) {
 					res.send(results);
+					console.log('closing connecting to mlab');
 					db.close();
 				});
+
 			});
+
 		});
 
 	return adminRouter;
