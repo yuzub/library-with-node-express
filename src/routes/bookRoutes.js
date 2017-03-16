@@ -8,6 +8,12 @@ var url = 'mongodb://yoda:master@ds131510.mlab.com:31510/libraryapp';
 
 var router = function(nav) {
 
+	bookRouter.use(function(req, res, next) {
+		if (!req.user) {
+			res.redirect('/');
+		}
+		next();
+	});
 	bookRouter.route('/')
 		.get(function(req, res) {
 

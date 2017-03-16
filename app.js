@@ -22,7 +22,7 @@ var authRouter = require('./src/routes/authRoutes')(nav);
 app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
-app.user(cookieParser());
+app.use(cookieParser());
 app.use(session({secret: 'library'}));
 
 require('./src/config/passport')(app);
