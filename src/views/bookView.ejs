@@ -103,7 +103,7 @@
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="#"><img alt="" src="/img/book-cover.png" style="width:100px;height:100px"></a>
+              <a class="story-title" href="#"><img alt="" src="<%=book.book.image_url%>" style="width:100px;"></a>
             </div>
             <div class="col-md-10 col-sm-9">
               <h3><%=book.title%></h3>
@@ -113,7 +113,7 @@
                 </div>
                 <div class="col-xs-3"></div>
               </div>
-              <br><br>
+              <br><%-book.book.description%><br>
             </div>
           </div>
           <hr>
